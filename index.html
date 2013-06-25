@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Picturefill</title>
+		<script src="external/matchmedia.js"></script>
+		<script src="components/picturefill/picturefill.js"></script>
+		<script src="components/jquery/jquery.js"></script>
+		<script src="components/jquery-resize/jquery.ba-resize.js"></script>
+		<script src="picturefill.matchElement.js"></script>
+		<style>
+			body { font-family: sans-serif }
+			img {  max-width: 100% }
+		</style>
+	</head>
+	<body>
+		
+		<h1>Picturefill.matchElement: A Picturefill plugin</h1>
+				
+		<p>For more info: <a href="http://github.com/AndersDJohnson/picturefill.matchElement">see project home.</a></p>
+		
+		<!-- optional data-picture-resize attribute -->
+		<span id="picture" data-picture data-alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia" style="display:block;" >
+			<span data-src="external/imgs/small.jpg"></span>
+			<span data-src="external/imgs/medium.jpg" data-rules='{"#picture": {"min-width": 400}}'></span>
+			<span data-src="external/imgs/large.jpg" data-rules='{"#picture": {"min-width": 800}}'></span>
+			<span data-src="external/imgs/extralarge.jpg" data-rules='{"#picture": {"min-width": 1000}}'></span>
+
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="external/imgs/small.jpg" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia"></noscript>
+		</span>
+	</body>
+</html>
