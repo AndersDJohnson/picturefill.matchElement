@@ -17,7 +17,7 @@ bower install
 
 ## Dependencies
 
-Specified in the Bower file (`bower.json`). For now, jQuery is the only hard dependency. There's an optional dependency on [Ben Alman's jquery-resize][jquery-resize]] plugin to support per-element resize events that re-evaluate the chosen source.
+Specified in the Bower file (`bower.json`). For now, jQuery is the only hard dependency. There's an optional dependency on [Ben Alman's jquery-resize][jquery-resize] plugin to support per-element resize events that re-evaluate the chosen source.
 
 ## Usage
 
