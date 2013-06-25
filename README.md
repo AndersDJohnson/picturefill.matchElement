@@ -2,11 +2,10 @@
 
 A Picturefill plugin for matching against elements.
 
-This is a plugin [my modified version][my-picturefill] of [Scott Jehl's Picturefill][scott-picturefill], in which I have (conveniently) implemented plugin support.
+This is a plugin for [my modified version][my-picturefill] of [Scott Jehl's Picturefill][scott-picturefill], in which I have (conveniently) implemented plugin support.
 
-Supports source rules like min/mix-width/height for other DOM elements.
-
-Last matching source wins, just as in the original plugin.
+- Supports source rules for matching against properties, including dimensions, of other DOM elements.
+- Friendly to mix with the media query attributes of the original plugin.
 
 ## Install
 
@@ -20,11 +19,18 @@ bower install
 
 Specified in the Bower file (`bower.json`). For now, jQuery is the only hard dependency. There's an optional dependency on [Ben Alman's jquery-resize][jquery-resize]] plugin to support per-element resize events that re-evaluate the chosen source.
 
-## Example
+## Usage
 
-See below, but also the included `index.html`.
+(See also the included `index.html`.)
 
-### Basic usage:
+Add a `data-rules` attribute to your source element(s). Its value should be a JSON string mapping a jQuery selector to a set of rules. Currently supported rules are:
+
+- `"min-width": pixels`
+- `"max-width": pixels`
+- `"min-height": pixels`
+- `"max-height": pixels`
+
+Example:
 
 ```html
 <span id="picture" data-picture>
@@ -35,7 +41,9 @@ See below, but also the included `index.html`.
 </span>
 ```
 
-### Per-element resize events (with jquery-resize):
+### Per-element resize events
+
+With the [jquery-resize][jquery-resize] plugin, you can enable per-element resize events by adding a `data-picture-resize` attribute to your picture element.
 
 ```html
 <span id="picture" data-picture data-picture-resize>
